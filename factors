@@ -1,21 +1,17 @@
 #!/usr/bin/python3
-"""read_file"""
+"""Factorize as many numbers as possible into a product of 2 smaller nums"""
 from sys import argv
-import math
 
 
 def factory(n=0):
     if (n % 2 == 0):
         return 2
     i = 3
-    if n % i == 0:
-        return i
-    else:
-        i += 2
+    while i * i <= n:
         if n % i == 0:
             return i
-    i += 2
-    return math.sqrt(n)
+        i += 2
+
 
 def factors(filename):
     """read_file(filename)
