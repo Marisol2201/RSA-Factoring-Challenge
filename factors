@@ -4,6 +4,7 @@ from sys import argv
 
 
 def factory(n=0):
+    """gets the factor of a number"""
     if (n % 2 == 0):
         return 2
     i = 3
@@ -14,10 +15,7 @@ def factory(n=0):
 
 
 def factors(filename):
-    """read_file(filename)
-    Keyword Arguments:
-        filename {str} -- name of the file (default: {""})
-    """
+    """read_file and prints them out"""
     with open(filename, encoding="utf-8") as my_file:
         for i in my_file.readlines():
             n = int(i)
